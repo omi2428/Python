@@ -1,0 +1,94 @@
+# Python
+Just beginner level projects easy to understand
+
+print("WELCOME TO THE GAME OF COLOR")
+choice = input("Press: '1' - To start the game. \n       OR\nPress: '2' - To exit the game.\n")
+choice = int(choice)
+
+if (choice == 1):
+    print("THE GAME HAS BEEN STARTED.")
+    
+    print("Level '1' out of 5")
+    print(" R=RED , B=BLUE , G=GREEN , Y=YELLOW , P=PINK , L=LAVENDER ")
+    print("[ R , B , G , Y , P , L ] \nENTER ANY OF THE LETTER FROM THE ABOVE:")
+    score = 0
+    attempts1=5
+    print("You have total attempts =", attempts1)
+    for _ in range(attempts1):
+        guess = input("Enter your guess: ")
+        if(guess.lower() == 'l'): 
+            print("YOU WON.")
+            score += 1
+            print("YOUR SCORE:", score)
+            break
+        else:
+            attempts1 -= 1
+            print("YOUR GUESS WAS WRONG! TRY AGAIN.")
+            print("You have", attempts1, "attempts left.")
+            
+    print("\nLevel '2' out of 5")
+    attempts2=5
+    print("You have total attempts =", attempts2)
+    for _ in range(attempts2):
+        guess = input("Enter your guess: ")
+        if(guess.lower() == 'r'): 
+            print("YOU WON.")
+            score += 1
+            print("YOUR SCORE:", score)
+            break
+        else:
+            attempts2 -= 1
+            print("YOUR GUESS WAS WRONG! TRY AGAIN.")
+            print("You have", attempts2, "attempts left.")
+            
+    print("\nLevel '3' out of 5")
+    attempts3=5
+    print("You have total attempts =", attempts3)
+    for _ in range(attempts3):
+        guess = input("Enter your guess: ")
+        if(guess.lower() == 'g'): 
+            print("YOU WON.")
+            score += 1
+            print("YOUR SCORE:", score)
+            break
+        else:
+            attempts3 -= 1
+            print("YOUR GUESS WAS WRONG! TRY AGAIN.")
+            print("You have", attempts3, "attempts left.")
+            
+    print("\nLevel '4' out of 5")
+    attempts4=5
+    print("You have total attempts =", attempts4)
+    for _ in range(attempts4):
+        guess = input("Enter your guess: ")
+        if(guess.lower() == 'p'): 
+            print("YOU WON.")
+            score += 1
+            print("YOUR SCORE:", score)
+            break
+        else:
+            attempts4 -= 1
+            print("YOUR GUESS WAS WRONG! TRY AGAIN.")
+            print("You have", attempts4, "attempts left.")
+            
+    print("\nLevel '5' out of 5")
+    attempts5=5
+    print("You have total attempts =", attempts5)
+    for _ in range(attempts5):
+        guess = input("Enter your guess: ")
+        if(guess.lower() == 'b'): 
+            print("YOU WON.")
+            score += 1
+            print("YOUR SCORE:", score)
+            break
+        else:
+            attempts5 -= 1
+            print("YOUR GUESS WAS WRONG! TRY AGAIN.")
+            print("You have", attempts5, "attempts left.")
+    if(score==5):
+        print("CONGRATULATIONS! YOU ARE CHAMPION! YOU HAVE COMPLETED ALL THE LEVELS .")
+elif (choice == 2):
+    print("EXIT!")
+    print("YOUR SCORE: 0")
+else:
+    print("Invalid choice. Please restart the game and choose a valid option.")
